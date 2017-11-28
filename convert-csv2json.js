@@ -5,7 +5,7 @@ const path = require('path')
 
 // Convert to json
 const convertor = (csvFile) => {
-    if(csvFile === '') throw console.log('csvFile is required')
+    if(csvFile == undefined) return console.log('csvFile is required')
 
     const fileParts = csvFile.split('.')
     let fileExtension = fileParts[fileParts.length-1]
